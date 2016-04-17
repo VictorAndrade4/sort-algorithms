@@ -1,6 +1,6 @@
 public class Merge extends Algoritmo {
 	public int[] sort(int[] arr){
-		mergeSort(arr, 0, arr.length);		
+		mergeSort(arr, 0, arr.length-1);		
 		return  arr;
 	}
 	
@@ -13,7 +13,7 @@ public class Merge extends Algoritmo {
 			merge(arr, p, q, r);
 		}
 	}
-	
+		
 	private static void merge(int[] arr, int p, int q, int r){
 		int tamEsq = q-p+1;
 		int tamDir = r-q;
@@ -31,15 +31,9 @@ public class Merge extends Algoritmo {
 		int i = 0;
 		int j = 0;
 		
-		for(int k=0; k<=r; k++){
-			if(esq[i] < dir[j]){
-				arr[k] = esq[i];
-				i++;
-			}
-			else{
-				arr[k] = dir[j];
-				j++;
-			}
+		for(int k=p; k<=r; k++){
+			if(esq[i] < dir[j]) arr[k] = esq[i++];
+			else arr[k] = dir[j++];
 		}
 	}
 }
