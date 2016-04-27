@@ -45,19 +45,23 @@ A partir dos dados de entrada, cada algoritmo teve determinado desempenho, que f
 
 ###5.1. BubbleSort
 Foi o algoritmo que se  comportou de pior forma em todas as situações. Precisou de quase 35 minutos para ordenar um array de tamanho 1 milhão, enquanto o QuickSort o fez em um décimo de segundo.
+É bastante utilizado em situações em que performance não importa, já que é o algoritmo de ordenação com a implementação mais simples.
 
 ###5.2. SelectionSort
 Em todos os testes, este algoritmo superou o BubbleSort. Para arrays com tamanhos reduzidos, superou o InsertionSort. Porém na maioria dos testes, foi o segundo pior algoritmo, segundo o desempenho apresentado. 
+O BubbleSort tem sempre a complexidade de O(n²),  portanto apesar de estável e previsível, é bastante custoso, principalmente para arrays muito grandes.
 
 ###5.3. InsertionSort
 Para arrays muito grandes, este algoritmo superou o SelectionSort. Porém teve um desempenho extremamente abaixo dos demais (MergeSort e QuickSort).
+A complexidade deste algoritmo pode variar, O(n) no melhor caso e O(n²) no pior caso e médio caso.
 
 ###5.4. QuickSort
 Obteve os melhores resultados. Sempre superou todos os outros algoritmos, com folga. 
+Apesar de ter complexidade de O(n²) em seu pior caso, possui complexidade de O(n log n) no caso médio. Fato este que torna o QuickSort um dos melhores algoritmos de ordenação, em termos de performance. 
 
 ###5.5. MergeSort
-Apesar de chegar a resultados próximos ao QuickSort, foi pior em todas as situações testadas. De forma geral, foi os segundo algoritmo mais eficiente.
-
+É um algoritmo extremamente popular, usa a recursividade além do método chamado de “divisão e conquista”. Apesar de chegar a resultados próximos ao QuickSort, não obteve resultados superiores ao mesmo. De forma geral, foi os segundo algoritmo mais eficiente.
+Em seu pior caso chega a ter complexidade de O(n log 2n), mas na maioria das vezes a complexidade não passa de O(n log n), por isso o MergeSort é considerado extremamente eficiente.
 
 
 
