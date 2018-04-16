@@ -29,7 +29,7 @@ public class Teste {
 		System.out.println("Teste --> "+ String.valueOf(algoritmo.getClass() ) );
 		algoritmo.sort(arr);
 		long tempoFinal = System.nanoTime();
-		System.out.println(("Execução: "+ (tempoFinal - tempoInicial)/Math.pow(10,9)+" s\n")); // Conversão de nanossegundos para segundos
+		System.out.println(("Execução: "+ (tempoFinal - tempoInicial)*Math.pow(10,9)+" s\n")); // Conversão de nanossegundos para segundos
 		return arr;
 	}
 	
